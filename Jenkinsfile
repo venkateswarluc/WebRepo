@@ -8,17 +8,17 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-      sh 'mvn clean install -f WebRepo/pom.xml'
+        sh 'mvn clean install -f WebRepo/pom.xml'
       }
     }
 
-   stage(‘Test’){
+   stage('Test'){
        step{
          echo "Test cases passed."
       }
    }
     
-       stage (' Deploy') {
+       stage ('Deploy') {
       steps {
       echo "deploying to DEV Env "
        sh 'cp WebRepo/mvnwebapp.war   /home/ubuntu/tomcat8/webapps/'
