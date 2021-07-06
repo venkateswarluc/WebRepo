@@ -20,7 +20,7 @@ pipeline {
        stage (' Deploy') {
       steps {
       echo "deploying to DEV Env "
-      deploy adapters: [tomcat9(credentialsId: '', path: '', url: 'http://your_public_dns:7070')], contextPath: null, war: '**/*.war'
+       sh 'cp WebRepo/mvnwebapp.war   /home/ubuntu/tomcat8/webapps/
       }
     }
           }
