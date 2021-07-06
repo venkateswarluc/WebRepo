@@ -1,5 +1,6 @@
 pipeline {
    
+   agent any
  
   tools {
   maven 'Maven3'
@@ -20,7 +21,7 @@ pipeline {
        stage (' Deploy') {
       steps {
       echo "deploying to DEV Env "
-       sh 'cp WebRepo/mvnwebapp.war   /home/ubuntu/tomcat8/webapps/
+       sh 'cp WebRepo/mvnwebapp.war   /home/ubuntu/tomcat8/webapps/'
       }
     }
           }
