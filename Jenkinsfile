@@ -21,7 +21,7 @@ pipeline {
        stage ('Deploy') {
       steps {
       echo "deploying to DEV Env "
-       sh 'scp WebRepo/mvnwebapp.war   ec2-user@<ip>:/home/ec2-user/tomcat/webapps/'
+       sh 'scp WebRepo/mvnwebapp.war   ec2-user@44.192.254.59:/home/ec2-user/tomcat9/webapps/'
       }
     }
           }
